@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subdomain Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <button id="logoBtn">
+      <img src="https://avatars.githubusercontent.com/u/142757185?s=200&v=4" alt="Logo" />
+      Subdomain Finder
+    </button>
+    <a href="https://crt.sh/" target="_blank">API Source</a>
+  </header>
+
+  <main>
+    <form id="searchForm">
+      <label for="domain">Enter a domain:</label>
+      <input id="domain" type="text" placeholder="example.com" required />
+      <button type="submit">Search</button>
+    </form>
+
+    <section id="results" style="display:none;">
+      <h2>Filter Results</h2>
+      <input id="filterInput" class="filter-input" type="text" placeholder="Type to filter…">
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Subdomain (A–Z)</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
